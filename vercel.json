@@ -1,0 +1,20 @@
+{
+	"$schema": "https://openapi.vercel.sh/vercel.json",
+	"version": 2,
+	"alias": "imoxto.me",
+	"cleanUrls": true,
+	"public": true,
+	"regions": ["lhr1"],
+	"redirects": [
+		{ "source": "/cv", "destination": "https://rxresu.me/mohammad.rafid.hamid/education" },
+		{ "source": "/github", "destination": "https://github.com/imoxto" },
+		{ "source": "/linkedin", "destination": "https://www.linkedin.com/in/imoxto" },
+		{ "source": "/portfolio", "destination": "/projects" },
+		{ "source": "/resume", "destination": "https://rxresu.me/mohammad.rafid.hamid/education" },
+		{ "source": "/twitter", "destination": "https://twitter.com/ryon099" },
+		{
+			"source": "/contact",
+			"destination": "https://twitter.com/direct_messages/create/ryon099"
+		}
+	]
+}

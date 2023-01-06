@@ -1,0 +1,25 @@
+{
+	"parser": "@typescript-eslint/parser",
+	"plugins": ["@typescript-eslint"],
+	"extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+	"rules": {
+		"@typescript-eslint/array-type": [
+			"warn",
+			{
+				"default": "generic"
+			}
+		],
+		"@typescript-eslint/no-empty-interface": [
+			"warn",
+			{
+				"allowSingleExtends": true
+			}
+		],
+		"react/no-unknown-property": [
+			2,
+			{
+				"ignore": ["jsx", "global"]
+			}
+		]
+	}
+}

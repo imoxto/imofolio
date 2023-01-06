@@ -1,0 +1,28 @@
+[
+	{
+		"date": "01-05-2022",
+		"title": "First Job or Huge Project!",
+		"description": "Start working on a AI startup as a Software Engineer at Reinforz",
+		"icon": "feather:briefcase",
+		"link": {
+			"text": "Visit Reinforz",
+			"url": "https://www.reinforz.ai/"
+		}
+	},
+	{
+		"date": "01-01-2020",
+		"title": "Start University",
+		"description": "Began studying Computer Science and Engineering at Brac University",
+		"icon": "feather:book",
+		"link": {
+			"text": "Visit Brac University Website",
+			"url": "https://www.bracu.ac.bd/"
+		}
+	},
+	{
+		"date": "12-04-1997",
+		"title": "Birthday!",
+		"description": "I was born on 4th December, 1999",
+		"icon": "feather:gift"
+	}
+]
