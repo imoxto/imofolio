@@ -10,7 +10,7 @@ import type { NavigationItem } from '~/types';
 
 import { profile } from '~/data/profile';
 
-const { isBirthday, role, name, bio, pagesIgnore, social } = profile;
+const { isBirthday, alias, bio, pagesIgnore, social } = profile;
 
 const Event = dynamic<EventProps>(
 	() => import('~/components/Event.component').then(({ Event }) => Event),
@@ -56,9 +56,10 @@ export default function HomePage(): JSX.Element {
 							scale: [0.75, 1],
 						}}
 						className="text-gray-500 dark:text-white text-5xl sm:text-6xl md:text-6xl lg:text-8xl tracking-tight font-extrabold">
-						Hey <span className="inline-block origin-70 hover:(animate-wave)">👋</span>{' '}
-						I&apos;m {name}, <br className="hidden sm:block" />a{' '}
-						<Pill.Standard className="mt-4">{role}</Pill.Standard>
+						Hey <span className="inline-block origin-70 hover:(animate-wave)">👋</span>,
+						<br className="hidden sm:block" />
+						{`I'm `}
+						<Pill.Standard className="mt-4">{alias}</Pill.Standard>
 					</Animate>
 
 					<Animate

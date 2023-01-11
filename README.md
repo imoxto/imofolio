@@ -13,8 +13,6 @@
 
 ## 🛠 Development
 
-Forked from https://github.com/NuroDev/nuro.dev
-
 Clone the repository
 
 ```zsh

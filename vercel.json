@@ -6,11 +6,11 @@
 	"public": true,
 	"regions": ["lhr1"],
 	"redirects": [
-		{ "source": "/cv", "destination": "https://rxresu.me/mohammad.rafid.hamid/education" },
+		{ "source": "/cv", "destination": "https://rxresu.me/mohammad.rafid.hamid/intnl" },
 		{ "source": "/github", "destination": "https://github.com/imoxto" },
 		{ "source": "/linkedin", "destination": "https://www.linkedin.com/in/imoxto" },
 		{ "source": "/portfolio", "destination": "/projects" },
-		{ "source": "/resume", "destination": "https://rxresu.me/mohammad.rafid.hamid/education" },
+		{ "source": "/resume", "destination": "https://rxresu.me/mohammad.rafid.hamid/intnl" },
 		{ "source": "/twitter", "destination": "https://twitter.com/ryon099" },
 		{
 			"source": "/contact",

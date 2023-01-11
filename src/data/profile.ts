@@ -13,11 +13,11 @@ function getDescription(): string {
 }
 
 export const profile = {
-	name: 'Rafid',
+	name: 'Md. Rafid Hamid',
 	role: 'developer',
 	bio: getDescription(),
 	isBirthday: isBirthday(),
-	alias: 'rafid',
+	alias: 'Rafid',
 	social: {
 		twitter: 'ryon099',
 		github: 'imoxto',
