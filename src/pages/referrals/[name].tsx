@@ -1,13 +1,9 @@
 import splitbee from '@splitbee/web';
 
 import type { GetServerSideProps } from 'next';
-
-import type { Referrals } from '~/types';
+import { referrals } from '~/data/profile';
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
-	const { default: rawReferrals } = await import('~/data/referrals.json');
-	const referrals = rawReferrals as Referrals;
-
 	if (!params.name)
 		return {
 			redirect: {

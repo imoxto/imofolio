@@ -8,14 +8,14 @@ import RemarkPrism from 'remark-prism';
 import RemarkSlug from 'remark-slug';
 
 import type { FrontMatter, Post, RawFrontMatter } from '~/types';
-import { Blogs } from '~/data/profile';
+import { blogs } from '~/data/profile';
 
 /**
  * Get the slugs of all available blog posts
  */
 export async function getAllPostSlugs(): Promise<Array<{ slug: string; path: string }>> {
 	let responses: Array<{ slug: string; path: string }> = [];
-	const response = await fetch(`https://dev.to/api/articles?username=${Blogs.devto.username}`);
+	const response = await fetch(`https://dev.to/api/articles?username=${blogs.devto.username}`);
 	if (response.status === 200) {
 		const data = (await response.json()) as Array<{ slug: string; path: string }>;
 		responses = responses.concat(data.map((d) => ({ slug: d.slug, path: d.path })));
@@ -28,7 +28,7 @@ export async function getAllPostSlugs(): Promise<Array<{ slug: string; path: str
  */
 export async function getAllPostsFrontMatter(): Promise<Array<FrontMatter>> {
 	let responses: Array<FrontMatter> = [];
-	const response = await fetch(`https://dev.to/api/articles?username=${Blogs.devto.username}`);
+	const response = await fetch(`https://dev.to/api/articles?username=${blogs.devto.username}`);
 	if (response.status === 200) {
 		const data = (await response.json()) as Array<{
 			title: string;

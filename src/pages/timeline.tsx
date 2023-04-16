@@ -7,14 +7,13 @@ import { Layout } from '~/layouts';
 import type { GetStaticProps } from 'next';
 
 import type { Timeline, TimelineEvent } from '~/types';
-import { profile } from '~/data/profile';
+import { profile, timeline as rawTimeline } from '~/data/profile';
 
 interface TimelineProps {
 	timeline?: Timeline;
 }
 
 export const getStaticProps: GetStaticProps<TimelineProps> = async () => {
-	const { default: rawTimeline } = await import('~/data/timeline.json');
 	const timeline = (rawTimeline as Array<TimelineEvent>).sort(
 		(a, b) => +new Date(b.date) - +new Date(a.date),
 	);

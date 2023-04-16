@@ -56,6 +56,13 @@ const staticMenuItems: Array<Array<NavigationItem>> = [
 			href: `https://github.com/${profile.social.github}`,
 			external: true,
 		},
+		profile.social.linkedin && {
+			type: NavigationItemType.LINK,
+			icon: 'feather:linkedin',
+			text: 'LinkedIn',
+			href: `https://www.linkedin.com/in/${profile.social.linkedin}`,
+			external: true,
+		},
 	].filter((e) => e),
 ];
 

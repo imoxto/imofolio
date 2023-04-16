@@ -1,8 +1,8 @@
 import emojiRegex from 'emoji-regex';
 import { log } from 'next-axiom';
 
-import type { GitHubRepos, Project, ProjectPost } from '~/types';
-import { profile } from '~/data/profile';
+import type { GitHubRepos, Project } from '~/types';
+import { profile, projectPosts } from '~/data/profile';
 
 /**
  * Fetch Projects
@@ -46,8 +46,6 @@ export async function fetchProjects(): Promise<Array<Project> | null> {
 	for (const source of profile.projectSrcs) {
 		projects.push(...(await fetchRepos(source)));
 	}
-	const { default: rawProjectPosts } = await import('~/data/projects.json');
-	const projectPosts = rawProjectPosts as Array<ProjectPost>;
 
 	return projects
 		.map((repo) => {

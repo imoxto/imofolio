@@ -15,16 +15,14 @@ import { ListAction, ListActionType, Theme } from '~/types';
 import type { GetStaticProps } from 'next';
 
 import type { Referrals } from '~/types';
-import { profile } from '~/data/profile';
+import { profile, referrals as rawReferrals } from '~/data/profile';
 
 interface ReferralsProps {
 	referrals?: Referrals;
 }
 
 export const getStaticProps: GetStaticProps<ReferralsProps> = async () => {
-	const { default: rawReferrals } = await import('~/data/referrals.json');
-
-	const referrals = (rawReferrals as Referrals).sort((a, b) => {
+	const referrals = rawReferrals.sort((a, b) => {
 		const nameA = a.name.toUpperCase();
 		const nameB = b.name.toUpperCase();
 
